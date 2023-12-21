@@ -1,0 +1,76 @@
+
+// Animation  du loader
+@keyframes loaderBackground {
+    from {
+        transform: scale(0);
+        filter: blur(5px);
+        border-radius: 100%;
+    } to {
+        transform: scale(1);
+        filter: blur(0);
+        border-radius: 0;
+    }
+}
+
+@keyframes loaderTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes loaderSubTitle {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeLoader {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    } to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+// Animation du header 
+
+@keyframes headerAnimation {
+    from {
+        transform: scaleY(0);
+        transform-origin: top;
+    } to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes headerAnimationLink {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+    transform: translateX(-5px);
+    }
+    40% {
+    transform: translateX(5px);
+    }
+    60% {
+    transform: translateX(-5px);
+    }
+    80% {
+    transform: translateX(5px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+

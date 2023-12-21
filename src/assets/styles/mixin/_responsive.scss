@@ -1,0 +1,18 @@
+
+@mixin XL {
+    @media (max-width: 1400px) {
+        @content
+    }
+};
+
+@mixin L {
+    @media (max-width: 1024px) {
+        @content
+    }
+};
+
+@mixin M {
+    @media (max-width: 768px) {
+        @content
+    }
+};

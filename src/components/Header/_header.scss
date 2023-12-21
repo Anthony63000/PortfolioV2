@@ -1,0 +1,115 @@
+
+.header {
+    transform-origin: top;
+    animation: headerAnimation 500ms ease-in-out forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    &-right {
+        width: 50%;
+        display: flex;
+
+        @include L {
+            width: 65%;
+        }
+
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &-link {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color ease-in-out 500ms ease-in-out;
+
+                &:hover {
+                    animation: headerAnimationLink 500ms ease-in-out forwards;
+                    color: bisque;
+                }
+            }
+        }
+
+        &-navMobile {
+            justify-content: flex-end;
+            width: 100%;
+            display: flex;
+
+            &-burger {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.headerModal {
+    position: absolute;
+    padding: 10px 20px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../../assets/images/fonds.webp");
+    background-size: cover;
+    justify-content: space-between;
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        gap: 20px;
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                font-size: 18px;
+                font-weight: 900;
+                text-align: center;
+            }
+
+            &-subTitle {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        &-close {
+            font-size: 18px;
+        }
+    }
+
+    &-content {
+        display: flex;
+        height: 100%;
+
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 50px;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        &-link {
+            color: white;
+            text-decoration: none;
+
+            &-logo {
+                font-size: 30px;
+            }
+        }
+    }
+}
