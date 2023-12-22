@@ -6,20 +6,19 @@ const Loader = () => {
   const [closeAnimation, setCloseAnimation] = useState(false)
 
   // Gestion des timming des animation
-
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     const timer = setTimeout(() => {
-      setFirstAnimation(true)
-      return () => {
-        clearTimeout(timer)
-        document.body.style.overflow = 'auto';
-      }
-    }, 2100)
-  }, [])
+      setFirstAnimation(true);
+    }, 2100);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'visible';
+      document.body.style.overflowX = 'hidden';
+    };
+  }, []);
 
   // gestion de l'animation de fermeture du Loader
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setCloseAnimation(true)
@@ -30,15 +29,18 @@ const Loader = () => {
   }, [])
 
     return (
-      <div className={`${'loader'} ${closeAnimation ? "loader-animate" : ""}`}>
+      <div className={`${'loader'} 
+            ${closeAnimation ? "loader-animate" : ""}`}>
         <div className='loader-content'>
           <h1 
-            className={`${'loader-content-title'} ${firstAnimation ? "loader-content-title-animate" : ""}`}
+            className={`${'loader-content-title'} 
+            ${firstAnimation ? "loader-content-title-animate" : ""}`}
           >
             Portfolio
           </h1>
           <h2 
-            className={`${'loader-content-subTitle'} ${firstAnimation ? "loader-content-subTitle-animate" : ""}`}
+            className={`${'loader-content-subTitle'} 
+            ${firstAnimation ? "loader-content-subTitle-animate" : ""}`}
           >
             Borel Anthony
           </h2>

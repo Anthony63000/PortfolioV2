@@ -16,10 +16,13 @@ body {
     padding: 0 100px;
     margin: 0 auto;
     color: white;
-    overflow: hidden;
 
     @include L {
         padding: 0 50px;
+    }
+
+    @include M {
+        padding: 0 20px;
     }
 
 }

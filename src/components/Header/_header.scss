@@ -1,11 +1,26 @@
 
 .header {
+    background-color: #16272e;
     transform-origin: top;
     animation: headerAnimation 500ms ease-in-out forwards;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0 100px;
+
+    @include L {
+        padding: 0 50px;
+    }
+
+    @include S {
+        padding: 0 20px;
+    }
 
     &-right {
         width: 50%;
@@ -24,7 +39,7 @@
                 color: white;
                 text-decoration: none;
                 font-size: 18px;
-                transition: color ease-in-out 500ms ease-in-out;
+                transition: all ease-in-out 500ms ease-in-out;
 
                 &:hover {
                     animation: headerAnimationLink 500ms ease-in-out forwards;

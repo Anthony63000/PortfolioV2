@@ -1,0 +1,116 @@
+.banner {
+    margin-top: 139px;
+    display: flex;
+
+    @include L {
+        justify-content: space-between;
+    }
+
+    @include M {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &-left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        @include L {
+            width: 45%;
+        }
+
+        @include M {
+            width: 60%;
+        }
+
+        @include S {
+            width: 100%;
+        }
+
+        &-animate {
+            animation: bannerLeftAnimation 1000ms ease-in-out forwards;
+        }
+
+        &-image {
+            width: 75%;
+            object-fit: contain;
+            height: 90%;
+        }
+    }
+
+    &-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 80px;
+        gap: 40px;
+        opacity: 0;
+
+        @include XL {
+            padding: 40px;
+        }
+
+        @include L {
+            padding: 20px;
+            gap: 25px;
+            width: 55%;
+        }
+
+        @include M {
+            width: 100%;
+        }
+
+        &-animate {
+            animation: bannerRightAnimation 1000ms ease-in-out forwards;
+        }
+
+        &-title {
+            font-size: 28px;
+            text-align: center;
+            color: bisque;
+
+            @include L {
+                font-size: 22px;
+            }
+        }
+
+        &-text {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.4;
+
+            @include L {
+                font-size: 16px;
+            }
+        }
+
+        &-link {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid;
+            padding: 10px 20px;
+            border-radius: 10px;
+            letter-spacing: 1px;
+            transition: all 350ms ease-in-out;
+            font-weight: 600;
+
+            &:hover {
+                background-color: bisque;
+                color: black;
+                transform: scale(1.1);
+            }
+
+            @include L {
+                font-size: 11px;
+            }
+        }
+    }
+}

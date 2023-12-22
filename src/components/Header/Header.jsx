@@ -22,7 +22,6 @@ export default function Header() {
             setHeaderBurger(false)
           }
         }
-
         window.addEventListener('resize', handleResize);
         return () => {
           window.removeEventListener('resize', handleResize);
@@ -32,7 +31,7 @@ export default function Header() {
   return (
     <header>
         {!modalHeader ? (
-            <div className='header'>
+            <section className='header'>
             <div className="header-left">
                 <Logo 
                     style={{ width: "65px", height: "65px", fill: "white" }}
@@ -67,9 +66,9 @@ export default function Header() {
                     </nav>
                 )}
             </div>
-        </div>
+        </section>
         ) : (
-            <div className="headerModal">
+            <section className="headerModal">
                 <div className="headerModal-top">
                     <Logo
                         style={{ width: "50px", height: "50px", fill: "white" }}
@@ -123,7 +122,7 @@ export default function Header() {
                         <i className="fa-brands fa-linkedin headerModal-bottom-link-logo"></i>
                     </a>
                 </div>
-            </div>
+            </section>
         )}
     </header>
   )

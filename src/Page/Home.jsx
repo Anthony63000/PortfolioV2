@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Loader from '../components/Loader/Loader'
 import Header from "../components/Header/Header"
+import Banner from '../components/Banner/Banner'
+import Skills from '../components/Skills/Skills'
 
 export default function Home() {
 
@@ -22,6 +24,10 @@ export default function Home() {
       ) : (
         <div className='app'>
           <Header />
+          <main>
+            <Banner/>
+            <Skills/>
+          </main>
         </div>
       )}
     </>

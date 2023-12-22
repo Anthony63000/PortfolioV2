@@ -34,10 +34,8 @@
 
 @keyframes closeLoader {
     from {
-        transform: translateY(0);
         opacity: 1;
     } to {
-        transform: translateY(-100%);
         opacity: 0;
     }
 }
@@ -73,4 +71,28 @@
     transform: translateX(0);
     }
 }
+
+// Banner animation 
+
+@keyframes bannerLeftAnimation {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bannerRightAnimation {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
