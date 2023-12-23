@@ -43,7 +43,7 @@ export default function Banner() {
             code génial pour créer des expériences web qui décoiffent. 
             Viens jeter un œil et laisse-toi emporter dans mon univers digital.
         </p>
-        <a href="#" className='banner-right-link'>
+        <a href="#portfolio" className='banner-right-link'>
           Consulte mon portfolio
         </a>
       </div>

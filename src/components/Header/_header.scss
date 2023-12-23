@@ -23,11 +23,11 @@
     }
 
     &-right {
-        width: 50%;
+        width: 40%;
         display: flex;
 
         @include L {
-            width: 65%;
+            width: 60%;
         }
 
         &-nav {

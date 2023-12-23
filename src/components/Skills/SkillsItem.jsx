@@ -1,6 +1,6 @@
-import React from 'react'
 
 export default function SkillsItem({ stackName, stackLogo, stackLogoAlt }) {
+
   return (
     <div className='skills-middle-left-row-container'>
         <div className='skills-middle-left-row-container-content'>

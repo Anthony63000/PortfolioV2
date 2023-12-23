@@ -1,0 +1,169 @@
+.portfolio {
+    margin-top: 50px;
+
+    &-top {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+
+        @include M {
+            align-items: center;
+        }
+
+        &-title {
+            font-size: 24px;
+            color: bisque;
+            letter-spacing: 1px;
+
+            @include M {
+                font-size: 22px;
+            }
+        }
+
+        &-text {
+            font-size: 17px;
+        }
+    }
+    
+    &-fristProject {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            margin: 0 auto;
+            margin-top: 25px;
+
+            &-title {
+                text-align: center;
+                font-size: 22px;
+                color: bisque;
+
+                @include L {
+                    font-size: 20px;
+                }
+            }
+
+            &-text {
+                text-align: center;
+                font-size: 17px;
+
+                @include L {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-middle {
+            display: flex;
+            justify-content: space-between;
+
+            @include M {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            &-left {
+                width: 45%;
+                overflow: hidden;
+                border-radius: 10px;
+
+                @include L {
+                    display: flex;
+                    align-items: center;
+                }
+
+                @include M {
+                    width: 70%;
+                }
+
+                @include S {
+                    width: 100%;
+                }
+
+                &-image {
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 0 0 4px black;
+                    transform: scale(1);
+                    transition: all 350ms ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            &-right {
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 60px;
+
+                @include L {
+                    gap: 40px;
+                }
+
+                @include M {
+                    gap: 25px;
+                    width: 70%;
+                }
+
+                @include S {
+                    width: 100%;
+                }
+
+                &-title {
+                    font-size: 22px;
+                    color: bisque;
+
+                    @include L {
+                        font-size: 18px;
+                    }
+                }
+
+                &-text {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    text-align: center;
+
+                    @include L {
+                        font-size: 16px;
+                    }
+                }
+
+                &-button {
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    border: 1px solid white;
+                    color: white;
+                    background-color: transparent;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                    font-family: 'Dosis', sans-serif;
+                    letter-spacing: 1px;
+                    transition: all 350ms ease-in-out;
+                    cursor: pointer;
+
+                    @include L {
+                        font-size: 11px;
+                    }
+
+                    &:hover {
+                        background-color: bisque;
+                        color: black;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

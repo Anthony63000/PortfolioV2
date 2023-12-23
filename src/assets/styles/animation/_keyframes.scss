@@ -94,5 +94,75 @@
     }
 }
 
+// skills animation
+
+@keyframes skillsContainerAnimate {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes skillsTopAnimate {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes skillsLeftAnimate {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes skillsRightAnimate {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes skillsRowsAnimate {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+// animation pour les softSkills
+
+@keyframes softSkillsTop {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes softSkillsCard {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    } to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 

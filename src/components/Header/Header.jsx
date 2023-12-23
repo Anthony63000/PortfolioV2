@@ -6,13 +6,16 @@ import Navigation from "./Navigation"
 
 export default function Header() {
 
+    // On gère les state locaux du header
     const [headerBurger, setHeaderBurger] = useState(false) 
     const [modalHeader, setModalHeader] = useState(false)
 
+    // Fonction pour ouvrir ou fermer les modal
     const openCloseModal = () => {
         setModalHeader(!modalHeader)
     }
 
+    // On met en place le burger pour la navigation en fonction de la largeur d'écran
     useEffect(() => {
         function handleResize() {
           const screenWidth = window.innerWidth;
@@ -41,16 +44,12 @@ export default function Header() {
                 {!headerBurger ? (
                     <nav className="header-right-nav">
                         <Navigation
-                            linkName="Accueil"
-                            link="#"
-                        />
-                        <Navigation
                             linkName="Compétences"
-                            link="#"
+                            link="#skills"
                         />
                         <Navigation
                             linkName="Portfolio"
-                            link="#"
+                            link="#portfolio"
                         />
                         <Navigation
                             linkName="Contact"

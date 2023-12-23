@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SkillsImage from "../../assets/images/skills.webp"
 import SkillsItem from './SkillsItem'
 
@@ -12,10 +12,43 @@ import ImageRedux from "../../assets/images/redux-logo.svg"
 import ImageGitHub from "../../assets/images/github-icon-1.svg"
 import ImageGit from "../../assets/images/git-icon.svg"
 
+import useIntersectionObserver from '../Helper/HelperScrollAnimation'
+
 export default function Skills() {
+
+    const { observedRef, isIntersecting } = useIntersectionObserver();
+
+    const [animateTop, setAnimateTop] = useState(false)
+    const [animateLeft, setAnimateLeft] = useState(false)
+    const [animateRight, setAnimateRight] = useState(false)
+    const [itemsAnimate, setItemsAnimate] = useState(false)
+
+    useEffect(() => {
+        if(isIntersecting) {
+            const timer = setTimeout(() => {
+                setAnimateTop(true)
+                setTimeout(() => {
+                    setAnimateLeft(true)
+                    setAnimateRight(true)
+                    setTimeout(() => {
+                        setItemsAnimate(true)
+                    }, 1000)
+                }, 1000)
+            }, 0)
+            return () => {
+                clearTimeout(timer)
+            }
+        }
+    })
+    
   return (
-    <section className='skills'>
-        <div className='skills-top'>
+    <section 
+        id='skills' 
+        ref={observedRef} 
+        className={`${'skills'} 
+        ${isIntersecting ? "skills-animate" : ""}`}
+    >
+        <div className={`${'skills-top'} ${animateTop ? "skills-top-animate" : ""}`}>
             <h3 className='skills-top-title'>
                 Mes Compétences
             </h3>
@@ -24,13 +57,23 @@ export default function Skills() {
             </p>
         </div>
         <div className='skills-middle'>
-            <div className='skills-middle-left'>
+            <div className={`${'skills-middle-left'} 
+                ${animateLeft ? "skills-middle-left-animate" : ""}`}
+            >
                 <div className='skills-middle-left-top'>
                     <h4 className='skills-middle-left-top-title'>
                         Ma stack de développeur web Front-End 
                     </h4>
+                    <p className='skills-middle-left-top-text'>
+                        Les technologies que j'utilise agissent comme des outils pour transformer 
+                        des concepts abstraits en expériences concrètes. Elles permettent de 
+                        construire des sites et des applications web qui captivent, fonctionnent 
+                        de manière fluide et offrent une expérience utilisateur optimale.
+                    </p>
                 </div>
-                <div className='skills-middle-left-row'>
+                <div className={`${'skills-middle-left-row'} 
+                    ${itemsAnimate ? "skills-middle-left-row-animate1" : ""}`}
+                >
                     <h5 className='skills-middle-left-row-title'>
                         Intégration Web
                     </h5>
@@ -38,18 +81,23 @@ export default function Skills() {
                         <SkillsItem 
                             stackName="Html"
                             stackLogo={ImageHtml}
+                            stackLogoAlt="Image du logà HTML"
                         />
                         <SkillsItem 
                             stackName="Css"
                             stackLogo={ImageCss}
+                            stackLogoAlt="Image du logo CSS"
                         />
                         <SkillsItem 
                             stackName="Sass"
                             stackLogo={ImageSass}
+                            stackLogoAlt="Image du logo sass"
                         />
                     </div>
                 </div>
-                <div className='skills-middle-left-row'>
+                <div className={`${'skills-middle-left-row'} 
+                    ${itemsAnimate ? "skills-middle-left-row-animate2" : ""}`}
+                >
                     <h5 className='skills-middle-left-row-title'>
                         Front-End
                     </h5>
@@ -57,18 +105,23 @@ export default function Skills() {
                         <SkillsItem 
                             stackName="Javascript"
                             stackLogo={ImageJavascript}
+                            stackLogoAlt="Image du logo javascript"
                         />
                         <SkillsItem 
                             stackName="React"
                             stackLogo={ImageReact}
+                            stackLogoAlt="Image du logo react"
                         />
                         <SkillsItem 
                             stackName="Redux"
                             stackLogo={ImageRedux}
+                            stackLogoAlt="Image du logo redux"
                         />
                     </div>
                 </div>
-                <div className='skills-middle-left-row'>
+                <div className={`${'skills-middle-left-row'} 
+                    ${itemsAnimate ? "skills-middle-left-row-animate3" : ""}`}
+                >
                     <h5 className='skills-middle-left-row-title'>
                         Versionning
                     </h5>
@@ -84,7 +137,9 @@ export default function Skills() {
                     </div>
                 </div>
             </div>
-            <div className='skills-middle-right'>
+            <div className={`${'skills-middle-right'} 
+                ${animateRight ? "skills-middle-right-animate" : ""}`}
+            >
                 <img 
                     className='skills-middle-right-image'
                     src={SkillsImage}

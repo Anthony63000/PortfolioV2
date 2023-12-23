@@ -4,6 +4,11 @@
     &-top {
         display: flex;
         flex-direction: column;
+        opacity: 0;
+
+        &-animate {
+            animation: skillsTopAnimate 1000ms ease-in-out forwards;
+        }
 
         @include M {
             align-items: center;
@@ -34,6 +39,10 @@
         justify-content: space-between;
         gap: 25px;
 
+        @include XL {
+            margin-top: 25px;
+        }
+
         @include M {
             flex-direction: column-reverse;
             align-items: center;
@@ -47,6 +56,11 @@
             padding: 25px;
             border-radius: 10px;
             gap: 25px;
+            opacity: 0;
+
+            &-animate {
+                animation: skillsLeftAnimate 1000ms ease-in-out forwards;
+            }
 
             @include XL {
                 align-items: flex-start;
@@ -58,17 +72,33 @@
 
             &-top {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
-                width: 100%;
+                gap: 10px;
+                width: 60%;
+
+                @include XL {
+                    justify-content: center;
+                    width: 90%;
+                }
+
+                @include M {
+                    align-items: center;
+                    width: 100%;
+                }
 
                 &-title {
                     font-size: 22px;
-                    margin-bottom: 20px;
                     text-align: center;
+                    color: bisque;
 
                     @include M {
                         font-size: 20px;
                     }
+                }
+                &-text {
+                    font-size: 16px;
+                    text-align: center;
                 }
             }
 
@@ -82,6 +112,21 @@
                 border-radius: 10px;
                 box-shadow: 1px 1px 4px black;
                 transition: all 350ms ease-in-out;
+                opacity: 0;
+
+                    &-animate1 {
+                        animation: skillsRowsAnimate 500ms ease-in-out forwards;
+                    }
+
+                    &-animate2 {
+                        animation: skillsRowsAnimate 500ms ease-in-out forwards;
+                        animation-delay: 1s;
+                    }
+
+                    &-animate3 {
+                        animation: skillsRowsAnimate 500ms ease-in-out forwards;
+                        animation-delay: 2s;
+                    }
 
                 @include XL {
                     width: 90%;
@@ -117,7 +162,7 @@
                         flex-direction: column;
                         align-items: center;
                         gap: 10px;
-
+                        
                         &-icon {
                             width: 30px;
                             height: 30px;
@@ -142,6 +187,11 @@
             align-items: center;
             width: 40%;
             object-fit: cover;
+            opacity: 0;
+
+            &-animate {
+                animation: skillsRightAnimate 1000ms ease-in-out forwards;
+            }
 
             @include M {
                 width: 55%;
