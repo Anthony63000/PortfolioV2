@@ -19,7 +19,7 @@ export default function SoftSkills() {
             setSoftSkillsAnimationTop(true)
             const timer = setTimeout(() => {
                 setSoftSkillsAnimationCard(true)
-            }, 1000)
+            }, 500)
             return () => {
                 clearTimeout(timer)
             }

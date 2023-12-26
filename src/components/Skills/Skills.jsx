@@ -32,8 +32,8 @@ export default function Skills() {
                     setAnimateRight(true)
                     setTimeout(() => {
                         setItemsAnimate(true)
-                    }, 1000)
-                }, 1000)
+                    }, 500)
+                }, 500)
             }, 0)
             return () => {
                 clearTimeout(timer)

@@ -37,7 +37,7 @@ export default function Header() {
             <section className='header'>
             <div className="header-left">
                 <Logo 
-                    style={{ width: "65px", height: "65px", fill: "white" }}
+                    style={{ width: "55px", height: "55px", fill: "white" }}
                 />
             </div>
             <div className="header-right">

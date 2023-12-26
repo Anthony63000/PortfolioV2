@@ -180,6 +180,54 @@ body {
     transform: translateX(0);
   }
 }
+@keyframes topAnimationFirstProject {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FirstProjectToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes FirstProjectToRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes hoverImage {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    z-index: 12;
+  }
+}
+@keyframes hoverImageImage {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 .header {
   background-color: #16272e;
   transform-origin: top;
@@ -303,7 +351,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loaderBackground 2s ease-in-out forwards;
+  animation: loaderBackground 1500ms ease-in-out forwards;
   background-image: url("../../assets/images/fonds.webp");
   background-position: center;
   background-repeat: no-repeat;
@@ -311,7 +359,7 @@ body {
   overflow: hidden;
 }
 .loader-animate {
-  animation: closeLoader 2s ease-in-out forwards;
+  animation: closeLoader 1500ms ease-in-out forwards;
 }
 .loader-content {
   display: flex;
@@ -469,7 +517,7 @@ body {
   opacity: 0;
 }
 .skills-top-animate {
-  animation: skillsTopAnimate 1000ms ease-in-out forwards;
+  animation: skillsTopAnimate 500ms ease-in-out forwards;
 }
 @media (max-width: 768px) {
   .skills-top {
@@ -522,7 +570,7 @@ body {
   opacity: 0;
 }
 .skills-middle-left-animate {
-  animation: skillsLeftAnimate 1000ms ease-in-out forwards;
+  animation: skillsLeftAnimate 500ms ease-in-out forwards;
 }
 @media (max-width: 1440px) {
   .skills-middle-left {
@@ -649,7 +697,7 @@ body {
   opacity: 0;
 }
 .skills-middle-right-animate {
-  animation: skillsRightAnimate 1000ms ease-in-out forwards;
+  animation: skillsRightAnimate 500ms ease-in-out forwards;
 }
 @media (max-width: 768px) {
   .skills-middle-right {
@@ -695,7 +743,7 @@ body {
   opacity: 0;
 }
 .softSkills-top-animate {
-  animation: softSkillsTop 1s ease-in-out forwards;
+  animation: softSkillsTop 500ms ease-in-out forwards;
 }
 .softSkills-top-title {
   font-size: 24px;
@@ -820,6 +868,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1px;
+  opacity: 0;
+}
+.portfolio-top-animate {
+  animation: FirstProjectToRight 500ms ease-in-out forwards;
 }
 @media (max-width: 768px) {
   .portfolio-top {
@@ -839,6 +891,11 @@ body {
 .portfolio-top-text {
   font-size: 17px;
 }
+@media (max-width: 768px) {
+  .portfolio-top-text {
+    text-align: center;
+  }
+}
 .portfolio-fristProject {
   display: flex;
   flex-direction: column;
@@ -850,6 +907,10 @@ body {
   gap: 1px;
   margin: 0 auto;
   margin-top: 25px;
+  opacity: 0;
+}
+.portfolio-fristProject-top-animate {
+  animation: topAnimationFirstProject 500ms ease-in-out forwards;
 }
 .portfolio-fristProject-top-title {
   text-align: center;
@@ -885,6 +946,10 @@ body {
   width: 45%;
   overflow: hidden;
   border-radius: 10px;
+  opacity: 0;
+}
+.portfolio-fristProject-middle-left-animate {
+  animation: FirstProjectToLeft 500ms ease-in-out forwards;
 }
 @media (max-width: 1024px) {
   .portfolio-fristProject-middle-left {
@@ -921,6 +986,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 60px;
+  opacity: 0;
+}
+.portfolio-fristProject-middle-right-animate {
+  animation: FirstProjectToRight 500ms ease-in-out forwards;
 }
 @media (max-width: 1024px) {
   .portfolio-fristProject-middle-right {
@@ -980,4 +1049,80 @@ body {
   background-color: bisque;
   color: black;
   transform: scale(1.1);
+}
+.portfolio-portfolioContainer {
+  margin-top: 50px;
+}
+.portfolio-portfolioContainer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.portfolio-portfolioContainer-top-title {
+  font-size: 24px;
+  color: bisque;
+}
+.portfolio-portfolioContainer-top-text {
+  font-size: 17px;
+}
+.portfolio-portfolioContainer-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 35px;
+}
+.portfolio-portfolioContainer-middle-filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.portfolio-portfolioContainer-middle-filterBar-title {
+  font-size: 18px;
+}
+.portfolio-portfolioContainer-middle-filterBar-button {
+  padding: 10px 15px;
+  font-family: "Dosis", sans-serif;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 350ms ease-in-out;
+  cursor: pointer;
+}
+.portfolio-portfolioContainer-middle-filterBar-button:hover {
+  transform: scale(1.1);
+  background-color: bisque;
+  color: black;
+}
+.portfolio-portfolioContainer-middle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(1);
+}
+.portfolio-portfolioContainer-middle-container-link {
+  overflow: hidden;
+  border-radius: 10px;
+  transform: scale(1);
+  width: 95%;
+}
+.portfolio-portfolioContainer-middle-container-link-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 6px black;
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+.portfolio-portfolioContainer-middle-container-link-image:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=main.css.map */

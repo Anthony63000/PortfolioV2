@@ -10,7 +10,7 @@ const Loader = () => {
     document.body.style.overflow = 'hidden';
     const timer = setTimeout(() => {
       setFirstAnimation(true);
-    }, 2100);
+    }, 1500);
     return () => {
       clearTimeout(timer);
       document.body.style.overflow = 'visible';
@@ -22,7 +22,7 @@ const Loader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCloseAnimation(true)
-    }, 5000)
+    }, 3000)
     return () => {
       clearTimeout(timer)
     }

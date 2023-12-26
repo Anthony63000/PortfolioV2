@@ -1,12 +1,33 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
 
+import { useEffect, useState } from "react";
 import FirstProjectImage from "../../assets/images/epopee.webp";
+import useIntersectionObserver from "../Helper/HelperScrollAnimation";
 
-export default function firstProject() {
+export default function FirstProject() {
+
+    const { observedRef, isIntersecting } = useIntersectionObserver();
+
+    const [topAnimation, setTopAnimation] = useState(false);
+    const [firstProjectAnimation, setFirstProjectAnimation] = useState(false)
+
+    useEffect(() => {
+        if (isIntersecting) {
+            const timer = setTimeout(() => {
+                setTopAnimation(true);
+                setTimeout(() => {
+                    setFirstProjectAnimation(true);
+                }, 500)
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [isIntersecting]);
+
   return (
     <>
-        <div className='portfolio-fristProject-top'>
+        <div ref={observedRef} className={`${'portfolio-fristProject-top'}
+            ${topAnimation ? "portfolio-fristProject-top-animate" : ""}
+        `}>
             <h4 className='portfolio-fristProject-top-title'>
                 Projet en avant
             </h4>
@@ -15,14 +36,18 @@ export default function firstProject() {
             </p>
         </div>
         <div className='portfolio-fristProject-middle'>
-            <div className='portfolio-fristProject-middle-left'>
+            <div className={`${'portfolio-fristProject-middle-left'}
+                ${firstProjectAnimation ? "portfolio-fristProject-middle-left-animate" : ""}
+            `}>
                 <img 
                     className='portfolio-fristProject-middle-left-image'
                     src={FirstProjectImage}
                     alt="Image de l'application épopée des compos" 
                 />
             </div>
-            <div className='portfolio-fristProject-middle-right'>
+            <div className={`${'portfolio-fristProject-middle-right'}
+                ${firstProjectAnimation ? "portfolio-fristProject-middle-right-animate" : ""}
+            `}>
                 <h5 className='portfolio-fristProject-middle-right-title'>
                     L'Epopée des compos
                 </h5>

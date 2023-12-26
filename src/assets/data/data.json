@@ -1,0 +1,179 @@
+
+  {
+    "frontProject": [
+      {
+        "image":"https://Anthony63000.github.io/Portfolio/image/Site/Accueuil.png",
+        "altText": "Image de la page d'accueil du site Kasa"
+      },
+      {
+        "image":"https://Anthony63000.github.io/Portfolio/image/Site/Apropos.png",
+        "altText": "Image de la page à propos du site Kasa"
+      },
+      {
+        "image":"https://Anthony63000.github.io/Portfolio/image/Site/carte.png",
+        "altText": "Image de la page logement du site Kasa"
+      }
+    ],
+
+    "projects": [
+      {
+        "id": 1,
+        "category": "HTML&CSS",
+        "link": "https://anthony63000.github.io/Booki/",
+        "textAltImage": "Image du projet Booki",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/booki/cover/booki.webp",
+        "logo": "https://anthony63000.github.io/Portfolio/image/logo/booki.png",
+        "stacks": [
+           "Html", "Css"
+        ],
+        "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/css-3.svg"
+        ]
+      },
+      {
+        "id": 2,
+        "category": "HTML&CSS",
+        "link": "https://anthony63000.github.io/Ohmyfood/",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/ohmyfood/cover/ohmyfood.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/ohmyfood.png",
+        "textAltImage": "Image du projet OhMyFood",
+        "stacks": [
+          "Html", "Sass"
+       ],
+        "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/sass-1.svg"
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Javascript",
+        "link": "https://anthony63000.github.io/Print-it/",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/print-it/cover/print-it.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/printIt.png",
+        "textAltImage": "Image du projet Print-it",
+        "stacks": [
+          "Html", "Css", "JavaScript"
+       ],
+        "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/css-3.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/logo-javascript.svg"
+        ]
+      },
+      {
+        "id": 4,
+        "category": "React",
+        "link": "https://anthony63000.github.io/Kasa/",
+        "image": "https://anthony63000.github.io/Portfolio/image/Site/Accueuil.png",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/kasa.png",
+        "textAltImage": "Image du projet Kasa",
+        "stacks": [
+          "React", "Sass"
+       ],
+        "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/react-2.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/sass-1.svg"
+        ]
+        
+      },
+      {
+        "id": 5,
+        "category": "Javascript",
+        "link": "https://anthony63000.github.io/NinaCarducci/",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/nina/cover/nina.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/nina.png",
+        "textAltImage": "Image du projet de la phtotographe Nina Carducci",
+        "stacks": [
+          "Html", "Css", "JavaScript", "Bootsrap"
+       ],
+       "stackLogo": [
+        "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/css-3.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/logo-javascript.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/bootstrap-4.svg"
+        ]
+      },
+      {
+        "id": 6,
+        "category": "React",
+        "link": "https://github.com/Anthony63000/724Events",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/events/events.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/724events.png",
+        "textAltImage": "Image du projet 724 Event",
+        "stacks": [
+          "React", "Sass"
+       ],
+       "stackLogo": [
+        "https://anthony63000.github.io/Portfolio/image/stack/react-2.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/sass-1.svg"
+        ]
+      },
+      {
+        "id": 7,
+        "category": "HTML&CSS",
+        "link": "https://github.com/Anthony63000/724Events",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/Riding/riding.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/ridding.png",
+        "textAltImage": "Image du projet Riding Cities",
+        "stacks": [
+          "Html", "Css"
+       ],
+       "stackLogo": [
+        "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/css-3.svg"
+        ]
+      },
+      {
+        "id": 8,
+        "category": "React",
+        "link": "https://github.com/Anthony63000/Argent-Bank",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/argent-bank/argentbank.webp",
+        "logo":"https://anthony63000.github.io/Portfolio/image/logo/argent.png",
+        "textAltImage": "Image du projet Argent Bank",
+        "stacks": [
+          "React", "Sass", "Redux"
+       ],
+       "stackLogo": [
+        "https://anthony63000.github.io/Portfolio/image/stack/react-2.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/sass-1.svg",
+        "https://anthony63000.github.io/Portfolio/image/stack/redux-logo.svg"
+        ]
+      },
+      {
+        "id": 9,
+        "category": "React",
+        "link": "https://epopee-des-compos.anthodev.fr/",
+        "image": "https://anthony63000.github.io/Portfolio/image/portfolio/epopee/compos.webp",
+        "textAltImage": "Image du projet époée des compos",
+        "stacks": [
+          "React", "Sass", "Redux"
+       ],
+       "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/react-2.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/sass-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/redux-logo.svg"
+      ]
+      },
+      {
+        "id": 10,
+        "category": "Javascript",
+        "link": "https://anthony63000.github.ioSophieBluel/Sophie.webp",
+        "image":"https://anthony63000.github.io/Portfolio/image/portfolio/SophieBluel/Sophie.webp",
+        "textAltImage": "Image du portfolio de Sophie Bluel",
+        "stacks": [
+          "Html", "Css", "JavaScript", "NodeJs", "Express", "MongoDB"
+       ],
+       "stackLogo": [
+          "https://anthony63000.github.io/Portfolio/image/stack/html-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/css-3.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/logo-javascript.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/nodejs-1.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/express-109.svg",
+          "https://anthony63000.github.io/Portfolio/image/stack/mongodb-icon-2.svg"
+      ]
+      }
+    ]
+}
+  

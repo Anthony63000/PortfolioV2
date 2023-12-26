@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loaderBackground 2s ease-in-out forwards;
+    animation: loaderBackground 1500ms ease-in-out forwards;
     background-image: url("../../assets/images/fonds.webp");
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
     overflow: hidden;
 
     &-animate {
-        animation: closeLoader 2s ease-in-out forwards;
+        animation: closeLoader 1500ms ease-in-out forwards;
     }
 
     &-content {

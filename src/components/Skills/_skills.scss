@@ -7,7 +7,7 @@
         opacity: 0;
 
         &-animate {
-            animation: skillsTopAnimate 1000ms ease-in-out forwards;
+            animation: skillsTopAnimate 500ms ease-in-out forwards;
         }
 
         @include M {
@@ -59,7 +59,7 @@
             opacity: 0;
 
             &-animate {
-                animation: skillsLeftAnimate 1000ms ease-in-out forwards;
+                animation: skillsLeftAnimate 500ms ease-in-out forwards;
             }
 
             @include XL {
@@ -190,7 +190,7 @@
             opacity: 0;
 
             &-animate {
-                animation: skillsRightAnimate 1000ms ease-in-out forwards;
+                animation: skillsRightAnimate 500ms ease-in-out forwards;
             }
 
             @include M {

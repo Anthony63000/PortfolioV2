@@ -5,6 +5,11 @@
         display: flex;
         flex-direction: column;
         gap: 1px;
+        opacity: 0;
+
+        &-animate {
+            animation: FirstProjectToRight 500ms ease-in-out forwards;
+        }
 
         @include M {
             align-items: center;
@@ -22,6 +27,10 @@
 
         &-text {
             font-size: 17px;
+
+            @include M {
+                text-align: center;
+            }
         }
     }
     
@@ -36,6 +45,11 @@
             gap: 1px;
             margin: 0 auto;
             margin-top: 25px;
+            opacity: 0;
+
+            &-animate {
+                animation: topAnimationFirstProject 500ms ease-in-out forwards;
+            }
 
             &-title {
                 text-align: center;
@@ -71,6 +85,11 @@
                 width: 45%;
                 overflow: hidden;
                 border-radius: 10px;
+                opacity: 0;
+
+                &-animate {
+                    animation: FirstProjectToLeft 500ms ease-in-out forwards;
+                }
 
                 @include L {
                     display: flex;
@@ -106,7 +125,12 @@
                 justify-content: center;
                 align-items: center;
                 gap: 60px;
+                opacity: 0;
 
+                &-animate {
+                    animation: FirstProjectToRight 500ms ease-in-out forwards;
+                }
+                
                 @include L {
                     gap: 40px;
                 }
@@ -161,6 +185,94 @@
                         background-color: bisque;
                         color: black;
                         transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-portfolioContainer {
+        margin-top: 50px;
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+
+            &-title {
+                font-size: 24px;
+                color: bisque;
+            }
+
+            &-text {
+                font-size: 17px;
+            }
+        }
+
+        &-middle {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-top: 35px;
+
+            &-filterBar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 50%;
+                margin: 0 auto;
+
+                &-title {
+                    font-size: 18px;
+                }
+
+                &-button {
+                    padding: 10px 15px;
+                    font-family: 'Dosis', sans-serif;
+                    border-radius: 10px;
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 16px;
+                    transition: all 350ms ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        background-color: bisque;
+                        color: black;
+                    }
+                }
+            }
+
+            &-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                transform: scale(1);
+
+                &-link {
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transform: scale(1);
+                    width: 95%;
+
+                    &-image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        box-shadow: 0 0 6px black;
+                        transform: scale(1);
+                        transition: all 500ms ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
                     }
                 }
             }
