@@ -228,6 +228,72 @@ body {
     transform: scale(1.1);
   }
 }
+@keyframes openModalAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes openModalAnimationReturn {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes nextImage {
+  0% {
+    transform: translateX(0);
+  }
+  16% {
+    opacity: 1;
+  }
+  33% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes prevImage {
+  0% {
+    transform: translateX(0);
+  }
+  16% {
+    opacity: 1;
+  }
+  33% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .header {
   background-color: #16272e;
   transform-origin: top;
@@ -1125,4 +1191,83 @@ body {
 }
 .portfolio-portfolioContainer-middle-container-link-image:hover {
   transform: scale(1.2);
+}
+
+.modalFrontProject {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  opacity: 0;
+}
+.modalFrontProject-animate {
+  animation: openModalAnimation 500ms ease-in-out forwards;
+}
+.modalFrontProject-animateReturn {
+  animation: openModalAnimationReturn 500ms ease-in-out forwards;
+}
+.modalFrontProject-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalFrontProject-top-title {
+  font-size: 22px;
+}
+.modalFrontProject-top-close {
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+.modalFrontProject-top-close:hover {
+  transform: scale(1.1);
+}
+.modalFrontProject-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalFrontProject-middle-image {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 4px white;
+}
+.modalFrontProject-middle-image-next {
+  animation: nextImage 1000ms ease-in-out forwards;
+}
+.modalFrontProject-middle-image-prev {
+  animation: prevImage 1000ms ease-in-out forwards;
+}
+.modalFrontProject-middle-arrowLeft {
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.modalFrontProject-middle-arrowLeft:hover {
+  transform: translateX(5px);
+}
+.modalFrontProject-middle-arrowRight {
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.modalFrontProject-middle-arrowRight:hover {
+  transform: translateX(-5px);
+}
+.modalFrontProject-bottom {
+  display: flex;
+  justify-content: center;
+}
+.modalFrontProject-bottom-text {
+  font-size: 18px;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

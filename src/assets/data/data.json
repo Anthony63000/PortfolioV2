@@ -2,16 +2,18 @@
   {
     "frontProject": [
       {
-        "image":"https://Anthony63000.github.io/Portfolio/image/Site/Accueuil.png",
-        "altText": "Image de la page d'accueil du site Kasa"
-      },
-      {
-        "image":"https://Anthony63000.github.io/Portfolio/image/Site/Apropos.png",
-        "altText": "Image de la page à propos du site Kasa"
-      },
-      {
-        "image":"https://Anthony63000.github.io/Portfolio/image/Site/carte.png",
-        "altText": "Image de la page logement du site Kasa"
+      "title": "Épopée des compos",
+      "description" : "Dans le cadre d'un projet personnel, j'ai créé cette petite application qui permet de retrouver les noms des joueurs dans des matchs légendaires, en utilisant un système de points et de jokers.",
+      "images": [
+          {
+            "image":"image/firstProject/Epopee-accueil.webp",
+            "altText": "Image de la page d'accueil du site Kasa"
+          },
+          {
+            "image":"image/firstProject/Epopee-jeu.webp",
+            "altText": "Image de la page à propos du site Kasa"
+          }
+        ]
       }
     ],
 

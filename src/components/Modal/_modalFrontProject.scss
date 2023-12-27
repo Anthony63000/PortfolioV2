@@ -1,0 +1,93 @@
+.modalFrontProject {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    opacity: 0;
+
+    &-animate {
+        animation: openModalAnimation 500ms ease-in-out forwards;
+    }
+
+    &-animateReturn {
+        animation: openModalAnimationReturn 500ms ease-in-out forwards;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            font-size: 22px;
+        }
+
+        &-close {
+            font-size: 23px;
+            cursor: pointer;
+            transition: all 250ms;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &-middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-image {
+            width: 50%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 4px white;
+
+            &-next {
+                animation: nextImage 1000ms ease-in-out forwards;
+            }
+
+            &-prev {
+                animation: prevImage 1000ms ease-in-out forwards;
+            }
+        }
+
+        &-arrowLeft {
+            font-size: 25px;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                transform: translateX(5px);
+            }
+        }
+
+        &-arrowRight {
+            font-size: 25px;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                transform: translateX(-5px);
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: center;
+
+        &-text {
+            font-size: 18px;
+            overflow: hidden;
+        }
+    }
+}
